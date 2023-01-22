@@ -246,3 +246,51 @@ end)
 
 local NPC = Window:NewTab("NPC")
 local NPCSection = NPC:NewSection("StoryLine")
+NPCSection:NewButton("Jotaro P4 (1)", "Starts the Jotaro P4 quest.", function()
+local args = {
+    [1] = "Talk to Josuke"
+}
+
+game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
+end)
+NPCSection:NewButton("Josuke", "Starts the Josuke quest.", function()
+local args = {
+    [1] = "Thugs"
+}
+
+game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
+end)
+NPCSection:NewButton("Jotaro P4 (2)", "Starts the Jotaro P4 quest.", function()
+local args = {
+    [1] = "Defeat Okuyasu Nijimura"
+}
+
+game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
+end)
+NPCSection:NewButton("Okuyasu", "Starts the Okuyasu quest.", function()
+local args = {
+    [1] = "Speak to the informant when you have $5000"
+}
+
+game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
+end)
+NPCSection:NewButton("Informant ($5000)", "Starts the Informant quest.", function()
+local args = {
+    [1] = "Defeat 3 corrupt police"
+}
+
+game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
+end)
+NPCSection:NewLabel("Level NPC")
+NPCSection:NewButton("Giorno", "Starts the Giorno quest.", function()
+local args = {
+    [1] = "Defeat the boss"
+}
+
+game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
+end)
+local Other = Window:NewTab("Other")
+local OtherSection = Other:NewSection("Other")
+OtherSection:NewButton("Rankup ($5000)", "Makes you rank up.", function()
+game:GetService("ReplicatedStorage").Events.RankUpRequest:FireServer()
+end)
