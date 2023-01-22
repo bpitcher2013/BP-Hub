@@ -281,10 +281,17 @@ local args = {
 
 game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
 end)
-NPCSection:NewLabel("Level NPC")
 NPCSection:NewButton("Giorno", "Starts the Giorno quest.", function()
 local args = {
     [1] = "Defeat the boss"
+}
+
+game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
+end)
+NPCSection:NewLabel("Level NPC")
+NPCSection:NewButton("Jotaro P3 (LV25)", "Starts Jotaro P3 Quest.", function()
+local args = {
+    [1] = "Kill DIO"
 }
 
 game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
