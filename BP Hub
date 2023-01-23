@@ -31,6 +31,13 @@ end)
 PlayerSection:NewButton("CTRL Click TP", "CTRL click to teleport to your cursor.", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/vpy74egB", true))()
 end)
+PlayerSection:NewToggle("ESP", "Gives you esp.", function(state)
+    if state then
+        loadstring(game:HttpGet("https://pastebin.com/raw/gejLgBv8", true))()
+    else
+        _G.TeamLine = false
+    end
+end)
 --Items
 local Items = Window:NewTab("Items")
 local ItemSection = Items:NewSection("Use Items")
