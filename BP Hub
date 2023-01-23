@@ -315,3 +315,25 @@ local OtherSection = Other:NewSection("Other")
 OtherSection:NewButton("Rankup ($5000)", "Makes you rank up.", function()
 game:GetService("ReplicatedStorage").Events.RankUpRequest:FireServer()
 end)
+OtherSection:NewButton("Redeem Codes", "Redeems all codes.", function()
+local args = {
+    [1] = "HappyNewYear"
+}
+
+game:GetService("ReplicatedStorage").Events.RedeemCode:InvokeServer(unpack(args))
+local args = {
+    [1] = "4000favs"
+}
+
+game:GetService("ReplicatedStorage").Events.RedeemCode:InvokeServer(unpack(args))
+local args = {
+    [1] = "1000members"
+}
+
+game:GetService("ReplicatedStorage").Events.RedeemCode:InvokeServer(unpack(args))
+local args = {
+    [1] = "400kVISTS!"
+}
+
+game:GetService("ReplicatedStorage").Events.RedeemCode:InvokeServer(unpack(args))
+end)
