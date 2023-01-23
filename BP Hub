@@ -303,6 +303,13 @@ local args = {
 
 game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
 end)
+NPCSection:NewButton("Doppio (LV50)", "Starts the Doppio Quest.", function()
+local args = {
+    [1] = "Kill Giorno"
+}
+
+game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
+end)
 local Other = Window:NewTab("Other")
 local OtherSection = Other:NewSection("Other")
 OtherSection:NewButton("Rankup ($5000)", "Makes you rank up.", function()
