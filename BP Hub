@@ -319,6 +319,32 @@ local args = {
 
 game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
 end)
+
+--Autofarm
+local AutoFarm = Window:NewTab("Autofarm")
+local AutoFarmSection = AutoFarm:NewSection("Item Farm")
+local folder = game.workspace.Items
+
+AutoFarmSection:NewToggle("Item Farm", "Auto farms items.", function(state)
+    if state then
+        _G.IF = true;
+        while _G.IF do
+        wait()
+        game:GetService('VirtualInputManager'):SendKeyEvent(true,'E',false,nigga)
+        for i, Obj in next, folder:GetChildren() do
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Obj.CFrame
+            end
+        end
+    else
+        _G.IF = false;
+        while _G.IF do
+        wait()
+        game:GetService('VirtualInputManager'):SendKeyEvent(true,'E',false,nigga)
+        end
+    end
+end)
+
+--Other
 local Other = Window:NewTab("Other")
 local OtherSection = Other:NewSection("Other")
 OtherSection:NewButton("Rankup ($5000)", "Makes you rank up.", function()
