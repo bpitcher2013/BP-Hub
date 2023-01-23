@@ -6,7 +6,7 @@ local plr = game:service('Players')
 --Info
 local Info = Window:NewTab("Info")
 local InfoSection = Info:NewSection("Created by bpitcher2013#7057")
-InfoSection:NewLabel("Version 1.1")
+InfoSection:NewLabel("Version 1.2")
 
 --Player
 local Player = Window:NewTab("Player")
@@ -39,6 +39,9 @@ PlayerSection:NewToggle("ESP", "Gives you esp.", function(state)
     else
         _G.TeamLine = false
     end
+end)
+PlayerSection:NewButton("Invisible (Risk)", "Makes you invisible.", function()
+    game.Players.LocalPlayer.Character.LowerTorso:destroy()
 end)
 --Items
 local Items = Window:NewTab("Items")
