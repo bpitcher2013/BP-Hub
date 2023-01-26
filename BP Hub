@@ -6,7 +6,7 @@ local plr = game:service('Players')
 --Info
 local Info = Window:NewTab("Info")
 local InfoSection = Info:NewSection("Created by bpitcher2013#7057")
-InfoSection:NewLabel("Version 1.2")
+InfoSection:NewLabel("Version 1.3")
 
 --Player
 local Player = Window:NewTab("Player")
@@ -258,44 +258,77 @@ end)
 
 local NPC = Window:NewTab("NPC")
 local NPCSection = NPC:NewSection("StoryLine")
-NPCSection:NewButton("Jotaro P4 (1)", "Starts the Jotaro P4 quest.", function()
+NPCSection:NewButton("Rohan (1)", "Starts the Rohan quest.", function()
 local args = {
-    [1] = "Talk to Josuke"
+    [1] = "Find Koichi"
 }
 
 game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
 end)
-NPCSection:NewButton("Josuke", "Starts the Josuke quest.", function()
+NPCSection:NewButton("Koichi (1)", "Starts the Koichi quest.", function()
 local args = {
     [1] = "Thugs"
 }
 
 game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
 end)
-NPCSection:NewButton("Jotaro P4 (2)", "Starts the Jotaro P4 quest.", function()
+NPCSection:NewButton("Koichi (2)", "Starts the 2nd Koichi quest.", function()
 local args = {
-    [1] = "Defeat Okuyasu Nijimura"
+    [1] = "Koichi_"
+}
+
+game:GetService("ReplicatedStorage").Events.UpdateStoryline:FireServer(unpack(args))
+end)
+NPCSection:NewButton("Rohan (2)", "Starts the 2nd Rohan quest.", function()
+local args = {
+    [1] = "Get coffee for Rohan"
 }
 
 game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
 end)
-NPCSection:NewButton("Okuyasu", "Starts the Okuyasu quest.", function()
+NPCSection:NewButton("Coffee ($250)", "Starts the Rohan coffee quest.", function()
 local args = {
-    [1] = "Speak to the informant when you have $5000"
+    [1] = "Coffee cup"
 }
 
-game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+local args = {
+    [1] = "Rohan_1"
+}
+
+game:GetService("ReplicatedStorage").Events.UpdateStoryline:FireServer(unpack(args))
+end)
+NPCSection:NewButton("Jotaro P4", "Starts the Jotaro quest.", function()
+local args = {
+    [1] = "Jotaro_"
+}
+
+game:GetService("ReplicatedStorage").Events.UpdateStoryline:FireServer(unpack(args))
 end)
 NPCSection:NewButton("Informant ($5000)", "Starts the Informant quest.", function()
 local args = {
-    [1] = "Defeat 3 corrupt police"
+    [1] = "Informant1"
 }
 
-game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
+game:GetService("ReplicatedStorage").Events.UpdateStoryline:FireServer(unpack(args))
 end)
-NPCSection:NewButton("Giorno", "Starts the Giorno quest.", function()
+NPCSection:NewButton("Rohan (3)", "Starts the 3rd Rohan quest.", function()
 local args = {
-    [1] = "Defeat the boss"
+    [1] = "Rohan3"
+}
+
+game:GetService("ReplicatedStorage").Events.UpdateStoryline:FireServer(unpack(args))
+end)
+NPCSection:NewButton("Hayato", "Starts the Hayato quest.", function()
+local args = {
+    [1] = "Hayato"
+}
+
+game:GetService("ReplicatedStorage").Events.UpdateStoryline:FireServer(unpack(args))
+end)
+NPCSection:NewButton("Josuke", "Starts the Josuke quest.", function()
+local args = {
+    [1] = "Defeat Kosaku"
 }
 
 game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
