@@ -1,0 +1,141 @@
+--Main
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("BP Hub", "Midnight")
+local plr = game:service('Players')
+
+--Info
+local Info = Window:NewTab("Info")
+local InfoSection = Info:NewSection("Created by bpitcher2013#7057")
+InfoSection:NewLabel("Version 1.3")
+
+--Player
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player")
+PlayerSection:NewToggle("SuperHuman", "Gives you a speedboost and jumpboost.", function(state)
+    if state then
+        _G.TP = true
+        while _G.TP do
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 200
+        wait()
+        end
+    else
+        _G.TP = false
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 30
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 130
+    end
+end)
+PlayerSection:NewButton("Infinite Jump", "Allow you to jump infinitely.", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/6LPE9UYx", true))()
+end)
+PlayerSection:NewButton("CTRL Click TP", "CTRL click to teleport to your cursor.", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/vpy74egB", true))()
+end)
+loadstring(game:HttpGet("https://pastebin.com/raw/gejLgBv8", true))()
+_G.TeamLine = false
+PlayerSection:NewToggle("ESP", "Gives you esp.", function(state)
+    if state then
+        _G.TeamLine = true
+    else
+        _G.TeamLine = false
+    end
+end)
+PlayerSection:NewButton("Invisible (Risk)", "Makes you invisible.", function()
+    game.Players.LocalPlayer.Character.LowerTorso:destroy()
+end)
+
+--Beyblade
+local Bey = Window:NewTab("Bey Physics")
+local BeySection = Bey:NewSection("Edit Bey Physics")
+BeySection:NewSlider("Launch Power", "Changes launch power", 20000, 0, function(lp)
+    local args = {
+    [1] = lp
+}
+
+game:GetService("ReplicatedStorage").Events.launchPower:FireServer(unpack(args))
+end)
+--Preset Beys
+local Preset = Window:NewTab("Preset")
+local PresetSection = Preset:NewSection("Preset")
+PresetSection:NewButton("Defence 3", "Defence 3, Carrier, Kick", function(state)
+local args = {
+    [1] = "Defense 3",
+    [2] = "Carrier",
+    [3] = "Kick"
+}
+
+game:GetService("ReplicatedStorage").Events.confirmEvent:FireServer(unpack(args))
+end)
+PresetSection:NewButton("Defence 7", "Defense 7 [H.M], Slide, Bullet", function(state)
+
+local args = {
+    [1] = "Defense 7 [H.M]",
+    [2] = "Slide",
+    [3] = "Bullet"
+}
+
+game:GetService("ReplicatedStorage").Events.confirmEvent:FireServer(unpack(args))
+end)
+PresetSection:NewButton("Balance 4", "Balance 4(10), Zen, Balance Rubber", function(state)
+local args = {
+    [1] = "Balance 4 (10 blades)",
+    [2] = "Zen",
+    [3] = "Balance Rubber"
+}
+
+game:GetService("ReplicatedStorage").Events.confirmEvent:FireServer(unpack(args))
+end)
+PresetSection:NewButton("Code F", "Code F, Bump, Twin Ball", function(state)
+local args = {
+    [1] = "Code F",
+    [2] = "Bump",
+    [3] = "Twin Ball"
+}
+
+game:GetService("ReplicatedStorage").Events.confirmEvent:FireServer(unpack(args))
+end)
+PresetSection:NewButton("Attack 7", "Attack 7, Absolute, Hunter", function(state)
+local args = {
+    [1] = "Attack 7",
+    [2] = "Absolute",
+    [3] = "Hunter"
+}
+
+game:GetService("ReplicatedStorage").Events.confirmEvent:FireServer(unpack(args))
+end)
+PresetSection:NewButton("Attack 3 EVO", "Attack 3 EVO, Momentum, Low Exodus", function(state)
+local args = {
+    [1] = "Attack 3 Evo",
+    [2] = "Momentum",
+    [3] = "Low Exodus"
+}
+
+game:GetService("ReplicatedStorage").Events.confirmEvent:FireServer(unpack(args))
+end)
+PresetSection:NewButton("Attack 7F", "Attack 7, Fortress, Low Exodus", function(state)
+local args = {
+    [1] = "Attack 7",
+    [2] = "Fortress",
+    [3] = "Low Exodus"
+}
+
+game:GetService("ReplicatedStorage").Events.confirmEvent:FireServer(unpack(args))
+end)
+PresetSection:NewButton("Attack 1 Evo", "Attack 1 Evo, Cross, Xceed", function(state)
+local args = {
+    [1] = "Attack 1 Evo",
+    [2] = "Cross",
+    [3] = "Xceed"
+}
+
+game:GetService("ReplicatedStorage").Events.confirmEvent:FireServer(unpack(args))
+end)
+PresetSection:NewButton("Attack 2", "Attack 2, Slide, Tower", function(state)
+local args = {
+    [1] = "Attack 2",
+    [2] = "Slide",
+    [3] = "Tower"
+}
+
+game:GetService("ReplicatedStorage").Events.confirmEvent:FireServer(unpack(args))
+end)
