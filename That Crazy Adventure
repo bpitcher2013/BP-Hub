@@ -1,0 +1,410 @@
+--Main
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("BP Hub", "Midnight")
+local plr = game:service('Players')
+
+--Info
+local Info = Window:NewTab("Info")
+local InfoSection = Info:NewSection("Created by bpitcher2013#7057")
+InfoSection:NewLabel("Version 1.3")
+
+--Player
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player")
+PlayerSection:NewToggle("SuperHuman", "Gives you a speedboost and jumpboost.", function(state)
+    if state then
+        _G.TP = true
+        while _G.TP do
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 40
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+        wait()
+        end
+    else
+        _G.TP = false
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+PlayerSection:NewButton("Infinite Jump", "Allow you to jump infinitely.", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/6LPE9UYx", true))()
+end)
+PlayerSection:NewButton("CTRL Click TP", "CTRL click to teleport to your cursor.", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/vpy74egB", true))()
+end)
+loadstring(game:HttpGet("https://pastebin.com/raw/gejLgBv8", true))()
+_G.TeamLine = false
+PlayerSection:NewToggle("ESP", "Gives you esp.", function(state)
+    if state then
+        _G.TeamLine = true
+    else
+        _G.TeamLine = false
+    end
+end)
+PlayerSection:NewButton("Invisible (Risk)", "Makes you invisible.", function()
+    game.Players.LocalPlayer.Character.LowerTorso:destroy()
+end)
+--Items
+local Items = Window:NewTab("Items")
+local ItemSection = Items:NewSection("Use Items")
+ItemSection:NewButton("Uses Arrow", "Uses a arrow in your inventory.", function()
+plr.LocalPlayer:findFirstChildOfClass('Backpack')['Stand Arrow'].Parent = game.Players.LocalPlayer.Character
+game:GetService("ReplicatedStorage").Events.UseArrow:FireServer()
+end)
+ItemSection:NewButton("Uses Rokakaka", "Uses a rokakaka in your inventory.", function()
+plr.LocalPlayer:findFirstChildOfClass('Backpack')['Rokakaka'].Parent = game.Players.LocalPlayer.Character
+game:GetService("ReplicatedStorage").Events.Roka:FireServer()
+end)
+
+ItemSection:NewButton("Uses Corrupted Rokakaka", "Uses a corrupted rokakaka in your inventory.", function()
+plr.LocalPlayer:findFirstChildOfClass('Backpack')['Corrupted Rokakaka'].Parent = game.Players.LocalPlayer.Character
+local args = {
+    [1] = "Corrupt"
+}
+
+game:GetService("ReplicatedStorage").Events.Roka:FireServer(unpack(args))
+
+end)
+
+--Redeemed
+ItemSection:NewLabel("Redeemed Items")
+ItemSection:NewButton("Uses Redeemed Corrupted Rokakaka", "Uses a redeemed corrupted rokakaka in your inventory.", function()
+plr.LocalPlayer:findFirstChildOfClass('Backpack')['Redeemed Corrupted Rokakaka'].Parent = game.Players.LocalPlayer.Character
+local args = {
+    [1] = "Corrupt"
+}
+
+game:GetService("ReplicatedStorage").Events.Roka:FireServer(unpack(args))
+
+end)
+
+ItemSection:NewButton("Uses Redeemed Arrow", "Uses a redeemed arrow in your inventory.", function()
+plr.LocalPlayer:findFirstChildOfClass('Backpack')['Redeemed Stand Arrow'].Parent = game.Players.LocalPlayer.Character
+game:GetService("ReplicatedStorage").Events.UseArrow:FireServer()
+end)
+ItemSection:NewButton("Uses Redeemed Rokakaka", "Uses a redeemed rokakaka in your inventory.", function()
+plr.LocalPlayer:findFirstChildOfClass('Backpack')['Redeemed Rokakaka'].Parent = game.Players.LocalPlayer.Character
+game:GetService("ReplicatedStorage").Events.Roka:FireServer()
+end)
+
+--Shop
+local Shop = Window:NewTab("Shop")
+local ShopSection = Shop:NewSection("Buy")
+ShopSection:NewButton("Stand Arrow ($250)", "Buys a stand arrow.", function()
+local args = {
+    [1] = "Stand Arrow"
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+end)
+ShopSection:NewButton("Rokakaka ($300)", "Buys a rokakaka.", function()
+local args = {
+    [1] = "Rokakaka"
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+end)
+ShopSection:NewButton("Stone Mask ($2000)", "Buys a Stone Mask.", function()
+local args = {
+    [1] = "Stone Mask"
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+end)
+ShopSection:NewButton("Linked sword ($2100)", "Buys a Linked sword.", function()
+local args = {
+    [1] = "Linked sword"
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+end)
+ShopSection:NewButton("Umbrella ($100)", "Buys a Umbrella.", function()
+local args = {
+    [1] = "Umbrella"
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+end)
+ShopSection:NewButton("inobii's Laptop ($2000)", "Buys inobii's Laptop.", function()
+local args = {
+    [1] = "inobii's Laptop"
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+end)
+ShopSection:NewButton("Corrupted Rokakaka ($700)", "Buys a Corrupted Rokakaka.", function()
+local args = {
+    [1] = "Corrupted Rokakaka"
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+end)
+--Sell
+ShopSection:NewLabel("Sell")
+ShopSection:NewButton("Stand Arrow ($100)", "Sells a Stand Arrow", function()
+local args = {
+    [1] = "Stand Arrow",
+    [2] = "1"
+}
+
+game:GetService("ReplicatedStorage").Events.Sell:FireServer(unpack(args))
+end)
+ShopSection:NewButton("Rokakaka ($125)", "Sells a Rokakaka", function()
+local args = {
+    [1] = "Rokakaka",
+    [2] = "1"
+}
+
+game:GetService("ReplicatedStorage").Events.Sell:FireServer(unpack(args))
+end)
+ShopSection:NewButton("inobii's Laptop ($1250)", "Sells inobii's Laptop", function()
+local args = {
+    [1] = "inobii's Laptop",
+    [2] = "1"
+}
+
+game:GetService("ReplicatedStorage").Events.Sell:FireServer(unpack(args))
+end)
+ShopSection:NewButton("Linked sword ($500)", "Sells a Linked sword", function()
+local args = {
+    [1] = "Linked sword",
+    [2] = "1"
+}
+
+game:GetService("ReplicatedStorage").Events.Sell:FireServer(unpack(args))
+end)
+ShopSection:NewButton("Stone Mask ($500)", "Sells a Stone Mask", function()
+local args = {
+    [1] = "Stone Mask",
+    [2] = "1"
+}
+
+game:GetService("ReplicatedStorage").Events.Sell:FireServer(unpack(args))
+end)
+ShopSection:NewButton("Corrupted Rokakaka ($250)", "Sells a Corrupted Rokakaka", function()
+local args = {
+    [1] = "Corrupted Rokakaka",
+    [2] = "1"
+}
+
+game:GetService("ReplicatedStorage").Events.Sell:FireServer(unpack(args))
+end)
+ShopSection:NewButton("Zeppeli's Hat ($1000)", "Sells Zeppeli's Hat", function()
+local args = {
+    [1] = "Zeppeli's Hat",
+    [2] = "1"
+}
+
+game:GetService("ReplicatedStorage").Events.Sell:FireServer(unpack(args))
+end)
+--Specs
+local Specs = Window:NewTab("Specs")
+local SpecSection = Specs:NewSection("Specialty")
+SpecSection:NewButton("Remove Spec ($10000)", "Removes your spec", function()
+game:GetService("ReplicatedStorage").Events.RemoveSpec:FireServer()
+end)
+SpecSection:NewButton("Brick Battle", "Requires Linked Sword and $5000", function()
+local args = {
+    [1] = "Brickbattle"
+}
+
+game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
+
+local args = {
+    [1] = "Brickbattle"
+}
+
+game:GetService("ReplicatedStorage").Events.Spec.GetSpec:FireServer(unpack(args))
+end)
+SpecSection:NewButton("Gun", "Requires Inobii's Laptop and $5000", function()
+local args = {
+    [1] = "Gun"
+}
+
+game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
+
+local args = {
+    [1] = "Gun"
+}
+
+game:GetService("ReplicatedStorage").Events.Spec.GetSpec:FireServer(unpack(args))
+end)
+SpecSection:NewButton("Vampire", "Requires Stone Mask $5000", function()
+local args = {
+    [1] = "Vampire"
+}
+
+game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
+
+local args = {
+    [1] = "Vampire"
+}
+
+game:GetService("ReplicatedStorage").Events.Spec.GetSpec:FireServer(unpack(args))
+end)
+SpecSection:NewButton("Hamon", "Zeppeli's Hat $5000", function()
+local args = {
+    [1] = "Hamon [Regular]"
+}
+
+game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
+
+
+local args = {
+    [1] = "Hamon [Regular]"
+}
+
+game:GetService("ReplicatedStorage").Events.Spec.GetSpec:FireServer(unpack(args))
+end)
+
+local NPC = Window:NewTab("NPC")
+local NPCSection = NPC:NewSection("StoryLine")
+NPCSection:NewButton("Rohan (1)", "Starts the Rohan quest.", function()
+local args = {
+    [1] = "Find Koichi"
+}
+
+game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
+end)
+NPCSection:NewButton("Koichi (1)", "Starts the Koichi quest.", function()
+local args = {
+    [1] = "Thugs"
+}
+
+game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
+end)
+NPCSection:NewButton("Koichi (2)", "Starts the 2nd Koichi quest.", function()
+local args = {
+    [1] = "Koichi_"
+}
+
+game:GetService("ReplicatedStorage").Events.UpdateStoryline:FireServer(unpack(args))
+end)
+NPCSection:NewButton("Rohan (2)", "Starts the 2nd Rohan quest.", function()
+local args = {
+    [1] = "Get coffee for Rohan"
+}
+
+game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
+end)
+NPCSection:NewButton("Coffee ($250)", "Starts the Rohan coffee quest.", function()
+local args = {
+    [1] = "Coffee cup"
+}
+
+game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+local args = {
+    [1] = "Rohan_1"
+}
+
+game:GetService("ReplicatedStorage").Events.UpdateStoryline:FireServer(unpack(args))
+end)
+NPCSection:NewButton("Jotaro P4", "Starts the Jotaro quest.", function()
+local args = {
+    [1] = "Jotaro_"
+}
+
+game:GetService("ReplicatedStorage").Events.UpdateStoryline:FireServer(unpack(args))
+end)
+NPCSection:NewButton("Informant ($5000)", "Starts the Informant quest.", function()
+local args = {
+    [1] = "Informant1"
+}
+
+game:GetService("ReplicatedStorage").Events.UpdateStoryline:FireServer(unpack(args))
+end)
+NPCSection:NewButton("Rohan (3)", "Starts the 3rd Rohan quest.", function()
+local args = {
+    [1] = "Rohan3"
+}
+
+game:GetService("ReplicatedStorage").Events.UpdateStoryline:FireServer(unpack(args))
+end)
+NPCSection:NewButton("Hayato", "Starts the Hayato quest.", function()
+local args = {
+    [1] = "Hayato"
+}
+
+game:GetService("ReplicatedStorage").Events.UpdateStoryline:FireServer(unpack(args))
+end)
+NPCSection:NewButton("Josuke", "Starts the Josuke quest.", function()
+local args = {
+    [1] = "Defeat Kosaku"
+}
+
+game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
+end)
+NPCSection:NewLabel("Level NPC")
+NPCSection:NewButton("Jotaro P3 (LV25)", "Starts the Jotaro P3 Quest.", function()
+local args = {
+    [1] = "Kill DIO"
+}
+
+game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
+end)
+NPCSection:NewButton("DIO (LV35)", "Starts the DIO Quest.", function()
+local args = {
+    [1] = "Kill Jotaro"
+}
+
+game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
+end)
+NPCSection:NewButton("Doppio (LV50)", "Starts the Doppio Quest.", function()
+local args = {
+    [1] = "Kill Giorno"
+}
+
+game:GetService("ReplicatedStorage").Events.Quests.StartQuest:FireServer(unpack(args))
+end)
+
+--Autofarm
+local AutoFarm = Window:NewTab("Autofarm")
+local AutoFarmSection = AutoFarm:NewSection("Item Farm")
+local folder = game.workspace.Items
+
+AutoFarmSection:NewToggle("Item Farm", "Auto farms items.", function(state)
+    if state then
+        _G.IF = true;
+        while _G.IF do
+        wait()
+        game:GetService('VirtualInputManager'):SendKeyEvent(true,'E',false,nigga)
+        for i, Obj in next, folder:GetChildren() do
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Obj.CFrame
+            end
+        end
+    else
+        _G.IF = false;
+        while _G.IF do
+        wait()
+        game:GetService('VirtualInputManager'):SendKeyEvent(true,'E',false,nigga)
+        end
+    end
+end)
+
+--Other
+local Other = Window:NewTab("Other")
+local OtherSection = Other:NewSection("Other")
+OtherSection:NewButton("Rankup ($5000)", "Makes you rank up.", function()
+game:GetService("ReplicatedStorage").Events.RankUpRequest:FireServer()
+end)
+OtherSection:NewButton("Redeem Codes", "Redeems all codes.", function()
+local args = {
+    [1] = "HappyNewYear"
+}
+
+game:GetService("ReplicatedStorage").Events.RedeemCode:InvokeServer(unpack(args))
+local args = {
+    [1] = "4000favs"
+}
+
+game:GetService("ReplicatedStorage").Events.RedeemCode:InvokeServer(unpack(args))
+local args = {
+    [1] = "1000members"
+}
+
+game:GetService("ReplicatedStorage").Events.RedeemCode:InvokeServer(unpack(args))
+local args = {
+    [1] = "400kVISTS!"
+}
+
+game:GetService("ReplicatedStorage").Events.RedeemCode:InvokeServer(unpack(args))
+end)
