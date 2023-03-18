@@ -139,3 +139,21 @@ local args = {
 
 game:GetService("ReplicatedStorage").Events.confirmEvent:FireServer(unpack(args))
 end)
+PresetSection:NewButton("Code L2", "Attack 2, Meteor', Low Exodus", function(state)
+local args = {
+    [1] = "Code L2",
+    [2] = "Super",
+    [3] = "Low Exodus"
+}
+
+game:GetService("ReplicatedStorage").Events.confirmEvent:FireServer(unpack(args))
+end)
+PresetSection:NewButton("Code L3", "Code L3, Super, Low Exodus", function(state)
+local args = {
+    [1] = "Code L3",
+    [2] = "Meteor'",
+    [3] = "Low Exodus"
+}
+
+game:GetService("ReplicatedStorage").Events.confirmEvent:FireServer(unpack(args))
+end)
