@@ -157,3 +157,12 @@ local args = {
 
 game:GetService("ReplicatedStorage").Events.confirmEvent:FireServer(unpack(args))
 end)
+PresetSection:NewButton("Stamina 3", "Stamina 3, Hammer, Low Metal Ball", function(state)
+local args = {
+    [1] = "Stamina 3 (Oval)",
+    [2] = "Hammer",
+    [3] = "Low Metal Ball"
+}
+
+game:GetService("ReplicatedStorage").Events.confirmEvent:FireServer(unpack(args))
+end)
