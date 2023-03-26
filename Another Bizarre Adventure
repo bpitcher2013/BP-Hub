@@ -50,7 +50,7 @@ local MainSection = Main:NewSection("Main")
 MainSection:NewButton("MP Teleport", "Telepors to Mr President Room.", function()
 fireclickdetector(mp)
 end)
-MainSection:NewButton("Regen Health", "Regenerates your health", function()
+MainSection:NewButton("Respawn", "Respawns", function()
 for i = 1,#checkPath do local v = checkPath[i]
     if v.Name == 'The Hand' then 
         local args = {
