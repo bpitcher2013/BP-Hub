@@ -78,11 +78,11 @@ for i = 1,#checkPath do local v = checkPath[i]
 game:GetService("ReplicatedStorage").RemoteEvents.StandChooser:FireServer(unpack(args))
     end 
 end
+end)
 MainSection:NewButton("NPC Shoot Gun", "Makes the viakajackNPC Shoot their gun.", function()
 local args = {
     [1] = game:GetService("Players").LocalPlayer
 }
 
 workspace.NPCs.viakajackNPC.Kill.RemoteEvent:FireServer(unpack(args))
-end)
 end)
