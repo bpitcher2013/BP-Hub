@@ -5,6 +5,6 @@ end
 if game.PlaceId == 6812437958 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Bey%20Physics", true))()
 end
-if game.PlaceId == 6812437958 then
+if game.PlaceId == 10373626245 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Another%20Bizarre%20Adventure", true))()
 end
