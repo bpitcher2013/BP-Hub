@@ -24,7 +24,7 @@ PlayerSection:NewToggle("SuperHuman", "Gives you a speedboost and jumpboost.", f
     else
         _G.TP = false
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-        game:GetService("Players").LocalPlayer.Character.Humanoid.JumpHeight = 10
+        game:GetService("Players").LocalPlayer.Character.Humanoid.JumpHeight = 7.2
     end
 end)
 PlayerSection:NewButton("Infinite Jump", "Allow you to jump infinitely.", function()
