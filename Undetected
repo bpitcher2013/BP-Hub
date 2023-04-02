@@ -1,4 +1,3 @@
-
 -- Instances:
 
 local ScreenGui = Instance.new("ScreenGui")
