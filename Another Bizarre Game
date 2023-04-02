@@ -13,18 +13,32 @@ InfoSection:NewLabel("Version 1.3")
 --Player
 local Player = Window:NewTab("Player")
 local PlayerSection = Player:NewSection("Player")
-PlayerSection:NewToggle("SuperHuman", "Gives you a speedboost and jumpboost.", function(state)
+PlayerSection:NewToggle("Speed", "Gives You Speed", function(state)
     if state then
-        _G.TP = true
-        while _G.TP do
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 40
-        game:GetService("Players").LocalPlayer.Character.Humanoid.JumpHeight = 20
-        wait()
-        end
+        velocity = Instance.new("BodyVelocity")
+velocity.maxForce = Vector3.new(100000, 0, 100000)
+local speed = 150 --Speed
+gyro = Instance.new("BodyGyro")
+gyro.maxTorque = Vector3.new(100000, 0, 100000)
+
+local hum = game.Players.LocalPlayer.Character.Humanoid
+_G.SP = true;
+while _G.SP do
+velocity.Parent = game.Players.LocalPlayer.Character.UpperTorso
+velocity.velocity = (hum.MoveDirection) * speed
+gyro.Parent = game.Players.LocalPlayer.Character.UpperTorso
+_G.SP = true;
+velocity.velocity = (hum.MoveDirection) * speed
+local refpos = gyro.Parent.Position + (gyro.Parent.Position - workspace.CurrentCamera.CoordinateFrame.p).unit * 5
+gyro.cframe = CFrame.new(gyro.Parent.Position, Vector3.new(refpos.x, gyro.Parent.Position.y, refpos.z))
+wait(0.1)
+end
+
+velocity.Parent = nil
+gyro.Parent = nil
+on = false
     else
-        _G.TP = false
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-        game:GetService("Players").LocalPlayer.Character.Humanoid.JumpHeight = 7.2
+        _G.SP = false;
     end
 end)
 PlayerSection:NewButton("Infinite Jump", "Allow you to jump infinitely.", function()
