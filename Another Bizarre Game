@@ -47,6 +47,7 @@ PlayerSection:NewToggle("Invisible", "Makes The Player Invisible", function(stat
         local savedpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, -200, 0)
+wait(0.15)
 local Seat = Instance.new('Seat', game.Workspace)
 Seat.Anchored = false
 Seat.CanCollide = false
