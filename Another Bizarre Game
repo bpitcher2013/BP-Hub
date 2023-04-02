@@ -4,6 +4,7 @@ local Window = Library.CreateLib("BP Hub", "Midnight")
 local plr = game:service('Players')
 local mp = game:GetService("Workspace").Map.MrPresident.ClickDetector
 local checkPath = game.Workspace:GetDescendants()
+
 --Info
 local Info = Window:NewTab("Info")
 local InfoSection = Info:NewSection("Created by bpitcher2013#7057")
@@ -41,8 +42,35 @@ PlayerSection:NewToggle("ESP", "Gives you esp.", function(state)
         _G.TeamLine = false
     end
 end)
-PlayerSection:NewButton("Invisible (Risk)", "Makes you invisible.", function()
-    game.Players.LocalPlayer.Character.LowerTorso:destroy()
+PlayerSection:NewToggle("Invisible", "Makes The Player Invisible", function(state)
+    if state then
+        local savedpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, -200, 0)
+local Seat = Instance.new('Seat', game.Workspace)
+Seat.Anchored = false
+Seat.CanCollide = false
+Seat.Name = 'invischair'
+Seat.Transparency = 1
+Seat.Position = Vector3.new(0, -200, 0)
+local Weld = Instance.new("Weld", Seat)
+Weld.Part0 = Seat
+Weld.Part1 = game.Players.LocalPlayer.Character:FindFirstChild("Torso") or game.Players.LocalPlayer.Character.UpperTorso
+wait()
+Seat.CFrame = savedpos
+game.StarterGui:SetCore("SendNotification", {
+Title = "Invis On";
+Duration = 1;
+Text = "";
+})
+    else
+        workspace:FindFirstChild('invischair'):Remove()
+game.StarterGui:SetCore("SendNotification", {
+Title = "Invis Off";
+Duration = 1;
+Text = "";
+})
+    end
 end)
 --Main
 local Main = Window:NewTab("Main")
