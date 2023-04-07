@@ -14,7 +14,7 @@
 ───────────────────────────────────────────────────────────────────────────────────
 ]]--
 -- Check game place ID and load corresponding script.
-if game.PlaceId == 9192157302 then
+if game.PlaceId == 9677242733 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/A%20Bizarre%20Universe", true))()
 elseif game.PlaceId == 6812437958 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Bey%20Physics", true))()
