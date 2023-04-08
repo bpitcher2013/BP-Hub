@@ -1,0 +1,108 @@
+--Main
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("BP Hub", "Midnight")
+local plr = game:service('Players')
+
+--Info
+local Info = Window:NewTab("Info")
+local InfoSection = Info:NewSection("Created by bpitcher2013#7057")
+InfoSection:NewLabel("Version 1.3")
+
+--Player
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player")
+PlayerSection:NewToggle("SuperHuman", "Gives you a speedboost and jumpboost.", function(state)
+    if state then
+        _G.TP = true
+        while _G.TP do
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 40
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+        wait()
+        end
+    else
+        _G.TP = false
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+PlayerSection:NewButton("Infinite Jump", "Allow you to jump infinitely.", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/6LPE9UYx", true))()
+end)
+PlayerSection:NewButton("CTRL Click TP", "CTRL click to teleport to your cursor.", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/vpy74egB", true))()
+end)
+loadstring(game:HttpGet("https://pastebin.com/raw/gejLgBv8", true))()
+_G.TeamLine = false
+PlayerSection:NewToggle("ESP", "Gives you esp.", function(state)
+    if state then
+        _G.TeamLine = true
+    else
+        _G.TeamLine = false
+    end
+end)
+PlayerSection:NewButton("Invisible", "Makes you invisible.", function()
+    game.Players.LocalPlayer.Character.LowerTorso:destroy()
+end)
+--Stats
+local Stat = Window:NewTab("Stats")
+local StatsSection = Stat:NewSection("Edit Stats")
+StatsSection:NewButton("Inf Strength", "Gives You Infinite Strength", function()
+local args = {
+    [1] = true,
+    [2] = math.huge,
+    [3] = 0,
+    [4] = 0,
+    [5] = 0,
+    [6] = 0
+}
+
+game:GetService("ReplicatedStorage").updateStats:FireServer(unpack(args))
+end)
+StatsSection:NewButton("Inf Durability", "Gives You Infinite Durability", function()
+local args = {
+    [1] = true,
+    [2] = 0,
+    [3] = math.huge,
+    [4] = 0,
+    [5] = 0,
+    [6] = 0
+}
+
+game:GetService("ReplicatedStorage").updateStats:FireServer(unpack(args))
+end)
+StatsSection:NewButton("Inf Buffness", "Gives You Infinite Buffness", function()
+local args = {
+    [1] = true,
+    [2] = 0,
+    [3] = 0,
+    [4] = 0,
+    [5] = math.huge,
+    [6] = 0
+}
+
+game:GetService("ReplicatedStorage").updateStats:FireServer(unpack(args))
+end)
+StatsSection:NewButton("Inf Height", "Gives You Infinite Height", function()
+local args = {
+    [1] = true,
+    [2] = 0,
+    [3] = 0,
+    [4] = 0,
+    [5] = 0,
+    [6] = math.huge
+}
+
+game:GetService("ReplicatedStorage").updateStats:FireServer(unpack(args))
+end)
+StatsSection:NewButton("Inf Speed (Don't Press)", "Gives You Infinite Speed", function()
+local args = {
+    [1] = true,
+    [2] = 0,
+    [3] = 0,
+    [4] = math.huge,
+    [5] = 0,
+    [6] = 0
+}
+
+game:GetService("ReplicatedStorage").updateStats:FireServer(unpack(args))
+end)
