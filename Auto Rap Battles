@@ -1,0 +1,77 @@
+--Main
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("BP Hub", "Midnight")
+local plr = game:service('Players')
+
+--Info
+local Info = Window:NewTab("Info")
+local InfoSection = Info:NewSection("Created by bpitcher2013#7057")
+InfoSection:NewLabel("Version 1.3")
+
+--Player
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player")
+PlayerSection:NewToggle("SuperHuman", "Gives you a speedboost and jumpboost.", function(state)
+    if state then
+        _G.TP = true
+        while _G.TP do
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 40
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+        wait()
+        end
+    else
+        _G.TP = false
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+PlayerSection:NewButton("Infinite Jump", "Allow you to jump infinitely.", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/6LPE9UYx", true))()
+end)
+PlayerSection:NewButton("CTRL Click TP", "CTRL click to teleport to your cursor.", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/vpy74egB", true))()
+end)
+loadstring(game:HttpGet("https://pastebin.com/raw/gejLgBv8", true))()
+_G.TeamLine = false
+PlayerSection:NewToggle("ESP", "Gives you esp.", function(state)
+    if state then
+        _G.TeamLine = true
+    else
+        _G.TeamLine = false
+    end
+end)
+PlayerSection:NewButton("Invisible", "Makes you invisible.", function()
+    game.Players.LocalPlayer.Character.LowerTorso:destroy()
+end)
+--Main
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Vote")
+MainSection:NewButton("Votes for Rapper1 (can spam)", "Votes For Rapper 1", function()
+game.Workspace.Votes:FireServer(false,"p1")
+end)
+MainSection:NewButton("Votes for Rapper2 (can spam)", "Votes For Rapper 2", function()
+game.Workspace.Votes:FireServer(false,"p2")
+end)
+MainSection:NewButton("TP To DJ booth", "Teleports To The DJ Booth", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-90., 60, -213)
+end)
+MainSection:NewButton("Play All Sounds", "Plays All Sounds", function()
+if game.SoundService.RespectFilteringEnabled == false then
+for i,v in pairs(game.Workspace:GetDescendants()) do
+if v:IsA("Sound") then
+v:Play()
+end
+end
+end
+end)
+MainSection:NewButton("Play All Sounds SPAM", "Spam Plays All Sounds", function()
+while true do
+    wait(2)
+    print(game:GetService("SoundService").RespectFilteringEnabled)
+    for _, sound in next, workspace:GetDescendants() do
+        if sound:IsA("Sound") then
+                sound:Play()
+        end
+    end
+end
+end)
