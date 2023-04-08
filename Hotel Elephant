@@ -1,0 +1,74 @@
+--Main
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("BP Hub", "Midnight")
+local plr = game:service('Players')
+
+--Player
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player")
+PlayerSection:NewToggle("SuperHuman", "Gives you a speedboost and jumpboost.", function(state)
+    if state then
+        _G.TP = true
+        while _G.TP do
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 200
+        wait()
+        end
+    else
+        _G.TP = false
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 30
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 130
+    end
+end)
+PlayerSection:NewButton("Infinite Jump", "Allow you to jump infinitely.", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/6LPE9UYx", true))()
+end)
+PlayerSection:NewButton("CTRL Click TP", "CTRL click to teleport to your cursor.", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/vpy74egB", true))()
+end)
+loadstring(game:HttpGet("https://pastebin.com/raw/gejLgBv8", true))()
+_G.TeamLine = false
+PlayerSection:NewToggle("ESP", "Gives you esp.", function(state)
+    if state then
+        _G.TeamLine = true
+    else
+        _G.TeamLine = false
+    end
+end)
+
+
+local Tab1 = Window:NewTab("Money")
+
+local Section1 = Tab1:NewSection("Givers")
+
+Section1:NewTextBox("Give All Money", "Gives Every Player Money", function(txt)
+
+local plrs = game:GetService("Players")
+
+for i, v in pairs(plrs:GetChildren()) do
+
+game:GetService("ReplicatedStorage").MoneyRequest:FireServer(false, (txt), "Cash", v)
+
+end
+
+end)
+
+Section1:NewTextBox("Give Yourself Money", "Gives Yourself Money", function(txt)
+
+local args = {
+
+    [1] = false,
+
+    [2] = (txt),
+
+    [3] = "Cash",
+
+    [4] = game:GetService("Players").LocalPlayer
+
+}
+
+ 
+
+game:GetService("ReplicatedStorage").MoneyRequest:FireServer(unpack(args))
+
+end)
