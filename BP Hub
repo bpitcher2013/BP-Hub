@@ -13,6 +13,7 @@
 ─████████████████─██████────────────██████──██████─██████████████─████████████████─
 ───────────────────────────────────────────────────────────────────────────────────
 ]]--
+loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Logo", true))()
 -- Check game place ID and load corresponding script.
 if game.PlaceId == 9677242733 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/That%20Crazy%20Adventure", true))()
