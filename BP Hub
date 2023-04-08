@@ -25,6 +25,8 @@ elseif game.PlaceId == 985510407 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Weight%20Lifting%20Simulator%202", true))()
 elseif game.PlaceId == 3956818381 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Ninja%20Legends", true))()
+elseif game.PlaceId == 23578803 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Hotel%20Elephant", true))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Loader", true))()
 end
