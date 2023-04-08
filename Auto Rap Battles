@@ -6,7 +6,10 @@ local plr = game:service('Players')
 --Info
 local Info = Window:NewTab("Info")
 local InfoSection = Info:NewSection("Created by bpitcher2013#7057")
-InfoSection:NewLabel("Version 1.3")
+InfoSection:NewLabel("Version 2.3")
+InfoSection:NewKeybind("Close/Open UI", "Opens And Closes The Gui", Enum.KeyCode.P, function()
+    Library:ToggleUI()
+end)
 
 --Player
 local Player = Window:NewTab("Player")
