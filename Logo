@@ -9,7 +9,7 @@ ImageLabel.BackgroundTransparency = 1
 ImageLabel.Position = UDim2.new(0.5, -(303 / 2), 0.5, -(263 / 2))
 ImageLabel.Rotation = 0
 ImageLabel.Size = UDim2.new(0, 303,0, 263)
-ImageLabel.Image = "rbxassetid://13048473371"
+ImageLabel.Image = "rbxassetid://13048473294"
 ImageLabel.ImageTransparency = 1
  
 for i = 1, 50, 2 do
@@ -17,7 +17,7 @@ for i = 1, 50, 2 do
     ImageLabel.ImageTransparency = ImageLabel.ImageTransparency - 0.1
     wait()
 end
-wait(0.1)
+wait(1)
  
 for i = 1, 50, 2 do
     blur.Size = 50 - i
