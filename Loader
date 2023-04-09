@@ -428,7 +428,7 @@ coroutine.wrap(ZTZO_fake_script)()
 local function NYQI_fake_script() -- WLS2.WLS2 
 	local script = Instance.new('LocalScript', WLS2)
 
-	WLS2MouseButton1Down:connect(function()
+	WLS2.MouseButton1Down:connect(function()
 		TeleportWLS2.Visible = not TeleportWLS2.Visible
 		ExecuteWLS2.Visible = not ExecuteWLS2.Visible
 	end)
