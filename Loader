@@ -339,8 +339,8 @@ local function AXBWXY_fake_script() -- ABG.ABG
 	local script = Instance.new('LocalScript', ABG)
 
 	ABG.MouseButton1Down:connect(function()
-		TeleportABG.Visible = not Visible
-		ExecuteABG.Visible = not Visible
+		TeleportABG.Visible = not TeleportABG.Visible
+		ExecuteABG.Visible = not ExecuteABG.Visible
 	end)
 	TeleportABG.MouseButton1Down:connect(function()
 		game:GetService("TeleportService"):Teleport(10373626245, LocalPlayer)
@@ -354,8 +354,8 @@ local function JFPSNSN_fake_script() -- ARB.ARB
 	local script = Instance.new('LocalScript', ARB)
 
 	ARB.MouseButton1Down:connect(function()
-		TeleportARB.Visible = not Visible
-		ExecuteARB.Visible = not Visible
+		TeleportARB.Visible = not TeleportARB.Visible
+		ExecuteARB.Visible = not ExecuteARB.Visible
 	end)
 	TeleportARB.MouseButton1Down:connect(function()
 		game:GetService("TeleportService"):Teleport(579955134, LocalPlayer)
@@ -369,8 +369,8 @@ local function CKOJIGY_fake_script() -- BF.BF
 	local script = Instance.new('LocalScript', BF)
 
 	BF.MouseButton1Down:connect(function()
-		TeleportBF.Visible = not Visible
-		ExecuteBF.Visible = not Visible
+		TeleportBF.Visible = not TeleportBF.Visible
+		ExecuteBF.Visible = not TeleportBF.Visible
 	end)
 	TeleportBF.MouseButton1Down:connect(function()
 		game:GetService("TeleportService"):Teleport(6812437958, LocalPlayer)
@@ -384,8 +384,8 @@ local function FGJYCT_fake_script() -- HL.HL
 	local script = Instance.new('LocalScript', HL)
 
 	HL.MouseButton1Down:connect(function()
-		TeleportHL.Visible = not Visible
-		ExecuteHL.Visible = not Visible
+		TeleportHL.Visible = not TeleportHL.Visible
+		ExecuteHL.Visible = not ExecuteHL.Visible
 	end)
 	TeleportHL.MouseButton1Down:connect(function()
 		game:GetService("TeleportService"):Teleport(23578803, LocalPlayer)
@@ -399,8 +399,8 @@ local function UWBAN_fake_script() -- NL.NL
 	local script = Instance.new('LocalScript', NL)
 
 	NL.MouseButton1Down:connect(function()
-		TeleportNL.Visible = not Visible
-		ExecuteNL.Visible = not Visible
+		TeleportNL.Visible = not TeleportNL.Visible
+		ExecuteNL.Visible = not TeleportNL.Visible
 	end)
 	TeleportNL.MouseButton1Down:connect(function()
 		game:GetService("TeleportService"):Teleport(3956818381, LocalPlayer)
@@ -414,8 +414,8 @@ local function PRRPP_fake_script() -- TCA.TCA
 	local script = Instance.new('LocalScript', TCA)
 
 	TCA.MouseButton1Down:connect(function()
-		TeleportTCA.Visible = not Visible
-		ExecuteTCA.Visible = not Visible
+		TeleportTCA.Visible = not TeleportTCA.Visible
+		ExecuteTCA.Visible = not ExecuteTCA
 	end)
 	TeleportTCA.MouseButton1Down:connect(function()
 		game:GetService("TeleportService"):Teleport(9677242733, LocalPlayer)
@@ -429,8 +429,8 @@ local function GOABI_fake_script() -- WLS2.WLS2
 	local script = Instance.new('LocalScript', WLS2)
 
 	WLS2MouseButton1Down:connect(function()
-		TeleportWLS2Visible = not Visible
-		ExecuteWLS2Visible = not Visible
+		TeleportWLS2.Visible = TeleportWLS2.Visible
+		ExecuteWLS2.Visible = ExecuteWLS2.Visible
 	end)
 	TeleportWLS2MouseButton1Down:connect(function()
 		game:GetService("TeleportService"):Teleport(985510407, LocalPlayer)
@@ -444,8 +444,8 @@ local function TTRJU_fake_script() -- A.A
 	local script = Instance.new('LocalScript', A)
 
 	A.MouseButton1Down:connect(function()
-		TeleportA.Visible = not Visible
-		ExecuteA.Visible = not Visible
+		TeleportA.Visible = not TeleportA.Visible
+		ExecuteA.Visible = not ExecuteA.Visible
 	end)
 	TeleportA.MouseButton1Down:connect(function()
 		game:GetService("TeleportService"):Teleport(286090429, LocalPlayer)
