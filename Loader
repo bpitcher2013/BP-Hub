@@ -366,7 +366,7 @@ TeleportFNAF.TextSize = 14.000
 
 -- Scripts:
 
-local function ZVTCK_fake_script() -- ABG.ABG 
+local function VUEQ_fake_script() -- ABG.ABG 
 	local script = Instance.new('LocalScript', ABG)
 
 	ABG.MouseButton1Down:connect(function()
@@ -382,8 +382,8 @@ local function ZVTCK_fake_script() -- ABG.ABG
 		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(ZVTCK_fake_script)()
-local function TYGE_fake_script() -- ARB.ARB 
+coroutine.wrap(VUEQ_fake_script)()
+local function KNJSCA_fake_script() -- ARB.ARB 
 	local script = Instance.new('LocalScript', ARB)
 
 	ARB.MouseButton1Down:connect(function()
@@ -399,8 +399,8 @@ local function TYGE_fake_script() -- ARB.ARB
 		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(TYGE_fake_script)()
-local function JGIM_fake_script() -- BF.BF 
+coroutine.wrap(KNJSCA_fake_script)()
+local function CBQXB_fake_script() -- BF.BF 
 	local script = Instance.new('LocalScript', BF)
 
 	BF.MouseButton1Down:connect(function()
@@ -416,8 +416,8 @@ local function JGIM_fake_script() -- BF.BF
 		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(JGIM_fake_script)()
-local function WUMQRF_fake_script() -- HL.HL 
+coroutine.wrap(CBQXB_fake_script)()
+local function CKMFE_fake_script() -- HL.HL 
 	local script = Instance.new('LocalScript', HL)
 
 	HL.MouseButton1Down:connect(function()
@@ -433,8 +433,8 @@ local function WUMQRF_fake_script() -- HL.HL
 		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(WUMQRF_fake_script)()
-local function MYUQKHA_fake_script() -- NL.NL 
+coroutine.wrap(CKMFE_fake_script)()
+local function BNUDH_fake_script() -- NL.NL 
 	local script = Instance.new('LocalScript', NL)
 
 	NL.MouseButton1Down:connect(function()
@@ -450,8 +450,8 @@ local function MYUQKHA_fake_script() -- NL.NL
 		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(MYUQKHA_fake_script)()
-local function BGFWE_fake_script() -- TCA.TCA 
+coroutine.wrap(BNUDH_fake_script)()
+local function TNTOAYT_fake_script() -- TCA.TCA 
 	local script = Instance.new('LocalScript', TCA)
 
 	TCA.MouseButton1Down:connect(function()
@@ -467,11 +467,11 @@ local function BGFWE_fake_script() -- TCA.TCA
 		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(BGFWE_fake_script)()
-local function UJHMFP_fake_script() -- WLS2.WLS2 
+coroutine.wrap(TNTOAYT_fake_script)()
+local function DZFC_fake_script() -- WLS2.WLS2 
 	local script = Instance.new('LocalScript', WLS2)
 
-	WLS2MouseButton1Down:connect(function()
+	WLS2.MouseButton1Down:connect(function()
 		TeleportWLS2.Visible = not TeleportWLS2.Visible
 		ExecuteWLS2.Visible = not ExecuteWLS2.Visible
 	end)
@@ -484,8 +484,8 @@ local function UJHMFP_fake_script() -- WLS2.WLS2
 		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(UJHMFP_fake_script)()
-local function GPHPV_fake_script() -- A.A 
+coroutine.wrap(DZFC_fake_script)()
+local function WKYFS_fake_script() -- A.A 
 	local script = Instance.new('LocalScript', A)
 
 	A.MouseButton1Down:connect(function()
@@ -501,8 +501,8 @@ local function GPHPV_fake_script() -- A.A
 		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(GPHPV_fake_script)()
-local function IWVAYS_fake_script() -- FNAF.FNAF 
+coroutine.wrap(WKYFS_fake_script)()
+local function OXAIEJF_fake_script() -- FNAF.FNAF 
 	local script = Instance.new('LocalScript', FNAF)
 
 	FNAF.MouseButton1Down:connect(function()
@@ -510,7 +510,7 @@ local function IWVAYS_fake_script() -- FNAF.FNAF
 		ExecuteFNAF.Visible = not ExecuteFNAF.Visible
 	end)
 	TeleportFNAF.MouseButton1Down:connect(function()
-		game:GetService("TeleportService"):Teleport(9677242733, LocalPlayer)
+		game:GetService("TeleportService"):Teleport(6828235261, LocalPlayer)
 		ScreenGui:Destroy()
 	end)
 	ExecuteFNAF.MouseButton1Down:connect(function()
