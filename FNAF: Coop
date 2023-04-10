@@ -77,11 +77,9 @@ MainSection:NewToggle("Animatronic ESP", "Allows You To See Animatronics Through
     end
 end)
 MainSection:NewButton("InstaInteract", "Allows You To Instantly Interact", function()
-    for i,v in pairs(workspace:GetDescendants()) do
-        if v.ClassName == "ProximityPrompt" then
-            fireproximityprompt(v,0)
-        end
-    end
+    game:GetService("ProximityPromptService").PromptButtonHoldBegan:Connect(function(prompt)
+        prompt.HoldDuration = 0
+    end)
 end)
 MainSection:NewButton("Godmode", "Makes You Invincible", function()
     game.Players.LocalPlayer.PlayerGui.PlayerCameraGUI:Destroy()
