@@ -366,7 +366,7 @@ TeleportFNAF.TextSize = 14.000
 
 -- Scripts:
 
-local function VUEQ_fake_script() -- ABG.ABG 
+local function EXRWYBE_fake_script() -- ABG.ABG 
 	local script = Instance.new('LocalScript', ABG)
 
 	ABG.MouseButton1Down:connect(function()
@@ -382,8 +382,8 @@ local function VUEQ_fake_script() -- ABG.ABG
 		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(VUEQ_fake_script)()
-local function KNJSCA_fake_script() -- ARB.ARB 
+coroutine.wrap(EXRWYBE_fake_script)()
+local function VREHX_fake_script() -- ARB.ARB 
 	local script = Instance.new('LocalScript', ARB)
 
 	ARB.MouseButton1Down:connect(function()
@@ -399,8 +399,8 @@ local function KNJSCA_fake_script() -- ARB.ARB
 		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(KNJSCA_fake_script)()
-local function CBQXB_fake_script() -- BF.BF 
+coroutine.wrap(VREHX_fake_script)()
+local function SUDO_fake_script() -- BF.BF 
 	local script = Instance.new('LocalScript', BF)
 
 	BF.MouseButton1Down:connect(function()
@@ -416,8 +416,8 @@ local function CBQXB_fake_script() -- BF.BF
 		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(CBQXB_fake_script)()
-local function CKMFE_fake_script() -- HL.HL 
+coroutine.wrap(SUDO_fake_script)()
+local function OWTFWV_fake_script() -- HL.HL 
 	local script = Instance.new('LocalScript', HL)
 
 	HL.MouseButton1Down:connect(function()
@@ -433,8 +433,8 @@ local function CKMFE_fake_script() -- HL.HL
 		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(CKMFE_fake_script)()
-local function BNUDH_fake_script() -- NL.NL 
+coroutine.wrap(OWTFWV_fake_script)()
+local function UHCDOMA_fake_script() -- NL.NL 
 	local script = Instance.new('LocalScript', NL)
 
 	NL.MouseButton1Down:connect(function()
@@ -450,8 +450,8 @@ local function BNUDH_fake_script() -- NL.NL
 		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(BNUDH_fake_script)()
-local function TNTOAYT_fake_script() -- TCA.TCA 
+coroutine.wrap(UHCDOMA_fake_script)()
+local function JVGSRW_fake_script() -- TCA.TCA 
 	local script = Instance.new('LocalScript', TCA)
 
 	TCA.MouseButton1Down:connect(function()
@@ -467,8 +467,8 @@ local function TNTOAYT_fake_script() -- TCA.TCA
 		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(TNTOAYT_fake_script)()
-local function DZFC_fake_script() -- WLS2.WLS2 
+coroutine.wrap(JVGSRW_fake_script)()
+local function LRJUH_fake_script() -- WLS2.WLS2 
 	local script = Instance.new('LocalScript', WLS2)
 
 	WLS2.MouseButton1Down:connect(function()
@@ -484,8 +484,8 @@ local function DZFC_fake_script() -- WLS2.WLS2
 		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(DZFC_fake_script)()
-local function WKYFS_fake_script() -- A.A 
+coroutine.wrap(LRJUH_fake_script)()
+local function PTIC_fake_script() -- A.A 
 	local script = Instance.new('LocalScript', A)
 
 	A.MouseButton1Down:connect(function()
@@ -501,8 +501,8 @@ local function WKYFS_fake_script() -- A.A
 		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(WKYFS_fake_script)()
-local function OXAIEJF_fake_script() -- FNAF.FNAF 
+coroutine.wrap(PTIC_fake_script)()
+local function PREWC_fake_script() -- FNAF.FNAF 
 	local script = Instance.new('LocalScript', FNAF)
 
 	FNAF.MouseButton1Down:connect(function()
@@ -514,7 +514,14 @@ local function OXAIEJF_fake_script() -- FNAF.FNAF
 		ScreenGui:Destroy()
 	end)
 	ExecuteFNAF.MouseButton1Down:connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/That%20Crazy%20Adventure", true))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/FNAF%3A%20Coop", true))()
 		ScreenGui:Destroy()
 	end)
 end
+coroutine.wrap(PREWC_fake_script)()
+local function HNRV_fake_script() -- ScrollingFrame. 
+	local script = Instance.new('Script', ScrollingFrame)
+
+	
+end
+coroutine.wrap(HNRV_fake_script)()
