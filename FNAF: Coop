@@ -82,13 +82,6 @@ MainSection:NewToggle("Animatronic ESP", "Allows You To See Animatronics Through
         Foxy.Parent = tempFolder
     end
 end)
-MainSection:NewButton("NoFog", "Removes All Fog InGame", function()
-    while true do
-        wait()
-        game.Lighting.FogEnd = 1000000
-        wait()
-    end
-end)
 MainSection:NewButton("Godmode", "Makes You Invincible", function()
     game.Players.LocalPlayer.PlayerGui.PlayerCameraGUI:Destroy()
     game.Players.LocalPlayer.PlayerGui.JumpscareGui:Destroy()
