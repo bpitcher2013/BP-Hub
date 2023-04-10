@@ -1,3 +1,6 @@
+-- Gui to Lua
+-- Version: 3.2
+
 -- Instances:
 
 local ScreenGui = Instance.new("ScreenGui")
@@ -33,6 +36,9 @@ local A = Instance.new("ImageButton")
 local ExecuteA = Instance.new("TextButton")
 local TeleportA = Instance.new("TextButton")
 local UIGridLayout = Instance.new("UIGridLayout")
+local FNAF = Instance.new("ImageButton")
+local ExecuteFNAF = Instance.new("TextButton")
+local TeleportFNAF = Instance.new("TextButton")
 
 --Properties:
 
@@ -333,9 +339,37 @@ UIGridLayout.Parent = ScrollingFrame
 UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
 UIGridLayout.CellPadding = UDim2.new(0, 13, 0, 5)
 
+FNAF.Name = "FNAF"
+FNAF.Parent = ScrollingFrame
+FNAF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FNAF.Position = UDim2.new(0.0147275422, 0, 0.0246913582, 0)
+FNAF.Size = UDim2.new(0, 90, 0, 90)
+FNAF.Image = "http://www.roblox.com/asset/?id=13065937278"
+
+ExecuteFNAF.Name = "ExecuteFNAF"
+ExecuteFNAF.Parent = FNAF
+ExecuteFNAF.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ExecuteFNAF.Size = UDim2.new(0, 50, 0, 50)
+ExecuteFNAF.Visible = false
+ExecuteFNAF.Font = Enum.Font.SourceSans
+ExecuteFNAF.Text = "Execute"
+ExecuteFNAF.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteFNAF.TextSize = 14.000
+
+TeleportFNAF.Name = "TeleportFNAF"
+TeleportFNAF.Parent = FNAF
+TeleportFNAF.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TeleportFNAF.Position = UDim2.new(0.5, 0, 0, 0)
+TeleportFNAF.Size = UDim2.new(0, 50, 0, 50)
+TeleportFNAF.Visible = false
+TeleportFNAF.Font = Enum.Font.SourceSans
+TeleportFNAF.Text = "Teleport"
+TeleportFNAF.TextColor3 = Color3.fromRGB(255, 255, 255)
+TeleportFNAF.TextSize = 14.000
+
 -- Scripts:
 
-local function QSJNOE_fake_script() -- ABG.ABG 
+local function ZVTCK_fake_script() -- ABG.ABG 
 	local script = Instance.new('LocalScript', ABG)
 
 	ABG.MouseButton1Down:connect(function()
@@ -344,13 +378,15 @@ local function QSJNOE_fake_script() -- ABG.ABG
 	end)
 	TeleportABG.MouseButton1Down:connect(function()
 		game:GetService("TeleportService"):Teleport(10373626245, LocalPlayer)
+		ScreenGui:Destroy()
 	end)
 	ExecuteABG.MouseButton1Down:connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Another%20Bizarre%20Game", true))()
+		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(QSJNOE_fake_script)()
-local function EGOHCYV_fake_script() -- ARB.ARB 
+coroutine.wrap(ZVTCK_fake_script)()
+local function TYGE_fake_script() -- ARB.ARB 
 	local script = Instance.new('LocalScript', ARB)
 
 	ARB.MouseButton1Down:connect(function()
@@ -359,13 +395,15 @@ local function EGOHCYV_fake_script() -- ARB.ARB
 	end)
 	TeleportARB.MouseButton1Down:connect(function()
 		game:GetService("TeleportService"):Teleport(579955134, LocalPlayer)
+		ScreenGui:Destroy()
 	end)
 	ExecuteARB.MouseButton1Down:connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Auto%20Rap%20Battles", true))()
+		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(EGOHCYV_fake_script)()
-local function LIVG_fake_script() -- BF.BF 
+coroutine.wrap(TYGE_fake_script)()
+local function JGIM_fake_script() -- BF.BF 
 	local script = Instance.new('LocalScript', BF)
 
 	BF.MouseButton1Down:connect(function()
@@ -374,13 +412,15 @@ local function LIVG_fake_script() -- BF.BF
 	end)
 	TeleportBF.MouseButton1Down:connect(function()
 		game:GetService("TeleportService"):Teleport(6812437958, LocalPlayer)
+		ScreenGui:Destroy()
 	end)
 	ExecuteBF.MouseButton1Down:connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Bey%20Physics", true))()
+		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(LIVG_fake_script)()
-local function KUMPY_fake_script() -- HL.HL 
+coroutine.wrap(JGIM_fake_script)()
+local function WUMQRF_fake_script() -- HL.HL 
 	local script = Instance.new('LocalScript', HL)
 
 	HL.MouseButton1Down:connect(function()
@@ -389,13 +429,15 @@ local function KUMPY_fake_script() -- HL.HL
 	end)
 	TeleportHL.MouseButton1Down:connect(function()
 		game:GetService("TeleportService"):Teleport(23578803, LocalPlayer)
+		ScreenGui:Destroy()
 	end)
 	ExecuteHL.MouseButton1Down:connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Hotel%20Elephant", true))()
+		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(KUMPY_fake_script)()
-local function UNKQUXU_fake_script() -- NL.NL 
+coroutine.wrap(WUMQRF_fake_script)()
+local function MYUQKHA_fake_script() -- NL.NL 
 	local script = Instance.new('LocalScript', NL)
 
 	NL.MouseButton1Down:connect(function()
@@ -404,13 +446,15 @@ local function UNKQUXU_fake_script() -- NL.NL
 	end)
 	TeleportNL.MouseButton1Down:connect(function()
 		game:GetService("TeleportService"):Teleport(3956818381, LocalPlayer)
+		ScreenGui:Destroy()
 	end)
 	ExecuteNL.MouseButton1Down:connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Ninja%20Legends", true))()
+		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(UNKQUXU_fake_script)()
-local function ZTZO_fake_script() -- TCA.TCA 
+coroutine.wrap(MYUQKHA_fake_script)()
+local function BGFWE_fake_script() -- TCA.TCA 
 	local script = Instance.new('LocalScript', TCA)
 
 	TCA.MouseButton1Down:connect(function()
@@ -419,28 +463,32 @@ local function ZTZO_fake_script() -- TCA.TCA
 	end)
 	TeleportTCA.MouseButton1Down:connect(function()
 		game:GetService("TeleportService"):Teleport(9677242733, LocalPlayer)
+		ScreenGui:Destroy()
 	end)
 	ExecuteTCA.MouseButton1Down:connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/That%20Crazy%20Adventure", true))()
+		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(ZTZO_fake_script)()
-local function NYQI_fake_script() -- WLS2.WLS2 
+coroutine.wrap(BGFWE_fake_script)()
+local function UJHMFP_fake_script() -- WLS2.WLS2 
 	local script = Instance.new('LocalScript', WLS2)
 
-	WLS2.MouseButton1Down:connect(function()
+	WLS2MouseButton1Down:connect(function()
 		TeleportWLS2.Visible = not TeleportWLS2.Visible
 		ExecuteWLS2.Visible = not ExecuteWLS2.Visible
 	end)
 	TeleportWLS2.MouseButton1Down:connect(function()
 		game:GetService("TeleportService"):Teleport(985510407, LocalPlayer)
+		ScreenGui:Destroy()
 	end)
 	ExecuteWLS2.MouseButton1Down:connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Weight%20Lifting%20Simulator%202", true))()
+		ScreenGui:Destroy()
 	end)
 end
-coroutine.wrap(NYQI_fake_script)()
-local function COUV_fake_script() -- A.A 
+coroutine.wrap(UJHMFP_fake_script)()
+local function GPHPV_fake_script() -- A.A 
 	local script = Instance.new('LocalScript', A)
 
 	A.MouseButton1Down:connect(function()
@@ -449,8 +497,27 @@ local function COUV_fake_script() -- A.A
 	end)
 	TeleportA.MouseButton1Down:connect(function()
 		game:GetService("TeleportService"):Teleport(286090429, LocalPlayer)
+		ScreenGui:Destroy()
 	end)
 	ExecuteA.MouseButton1Down:connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/Arsenal", true))()
+		ScreenGui:Destroy()
+	end)
+end
+coroutine.wrap(GPHPV_fake_script)()
+local function IWVAYS_fake_script() -- FNAF.FNAF 
+	local script = Instance.new('LocalScript', FNAF)
+
+	FNAF.MouseButton1Down:connect(function()
+		TeleportFNAF.Visible = not TeleportFNAF.Visible
+		ExecuteFNAF.Visible = not ExecuteFNAF.Visible
+	end)
+	TeleportFNAF.MouseButton1Down:connect(function()
+		game:GetService("TeleportService"):Teleport(9677242733, LocalPlayer)
+		ScreenGui:Destroy()
+	end)
+	ExecuteFNAF.MouseButton1Down:connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/bpitcher2013/BP-Hub/main/That%20Crazy%20Adventure", true))()
+		ScreenGui:Destroy()
 	end)
 end
